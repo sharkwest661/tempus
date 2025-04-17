@@ -112,7 +112,24 @@
     "logout": "Çıxış",
     "editProfile": "Profili redaktə edin",
     "noFavorites": "Hələ sevimlilər yoxdur",
-    "noBookings": "Hələ rezervasiya yoxdur"
+    "noBookings": "Hələ rezervasiya yoxdur",
+    "clearFavorites": "Bütün Sevimliləri Təmizlə",
+    "addSomeFavorites": "Məkanları araşdırarkən bəzi turları sevimlilərə əlavə edin.",
+    "travelStats": "Səyahət Statistikası",
+    "totalBookings": "Ümumi Rezervasiyalar",
+    "totalSpent": "Ümumi Xərclənmiş",
+    "daysAbroad": "Xaricdə Günlər",
+    "civilizationsVisited": "Ziyarət Edilmiş Sivilizasiyalar",
+    "destinationComparison": "Məkan Müqayisəsi",
+    "civilizationsCount": "Ziyarət Edilmiş Sivilizasiyalar",
+    "noStatsYet": "Hələ səyahət statistikası yoxdur",
+    "bookForStats": "Səyahət statistikalarını toplamağa başlamaq üçün tur sifariş edin.",
+    "noVisitsYet": "Hələ heç bir məkanı ziyarət etməmisiniz.",
+    "visit": "ziyarət",
+    "visits": "ziyarətlər",
+    "completionRate": "Kəşfiyyat İrəliləyişi",
+    "completionDescription": "Ziyarət etdiyiniz məlum sivilizasiyaların faizi",
+    "exploreMore": "Daha Çox Sivilizasiya Kəşf Edin"
   },
   "civilizations": {
     "egypt": {

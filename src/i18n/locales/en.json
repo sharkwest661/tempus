@@ -150,7 +150,22 @@
     "noFavorites": "No favorites yet",
     "noBookings": "No bookings yet",
     "clearFavorites": "Clear All Favorites",
-    "addSomeFavorites": "Add some tours to your favorites while exploring destinations."
+    "addSomeFavorites": "Add some tours to your favorites while exploring destinations.",
+    "travelStats": "Travel Statistics",
+    "totalBookings": "Total Bookings",
+    "totalSpent": "Total Spent",
+    "daysAbroad": "Days Abroad",
+    "civilizationsVisited": "Civilizations Visited",
+    "destinationComparison": "Destination Comparison",
+    "civilizationsCount": "Civilizations Visited",
+    "noStatsYet": "No travel statistics yet",
+    "bookForStats": "Book a tour to start collecting your travel statistics.",
+    "noVisitsYet": "You haven't visited any destinations yet.",
+    "visit": "visit",
+    "visits": "visits",
+    "completionRate": "Exploration Progress",
+    "completionDescription": "Percentage of known civilizations you have visited",
+    "exploreMore": "Explore More Civilizations"
   },
   "civilizations": {
     "egypt": {

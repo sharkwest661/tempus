@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import ProfileScreen from "../screens/profile/ProfileScreen";
 import FavoritesScreen from "../screens/profile/FavoritesScreen";
 import SettingsScreen from "../screens/profile/SettingsScreen";
+import TravelStatsScreen from "../screens/profile/TravelStatsScreen";
 
 const Stack = createStackNavigator();
 
@@ -13,6 +14,7 @@ const ProfileNavigator = () => {
       <Stack.Screen name="Profile" component={ProfileScreen} />
       <Stack.Screen name="Favorites" component={FavoritesScreen} />
       <Stack.Screen name="Settings" component={SettingsScreen} />
+      <Stack.Screen name="TravelStats" component={TravelStatsScreen} />
     </Stack.Navigator>
   );
 };

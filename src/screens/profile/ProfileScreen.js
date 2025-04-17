@@ -11,6 +11,7 @@ import {
   Settings,
   LogOut,
   ChevronRight,
+  BarChart2,
 } from "lucide-react-native";
 import { Box, Text, Card } from "../../components";
 import useAuthStore from "../../stores/authStore";
@@ -29,6 +30,12 @@ const ProfileScreen = ({ navigation }) => {
       title: t("profile.favorites"),
       screen: "Favorites",
       color: theme.colors.error,
+    },
+    {
+      icon: BarChart2,
+      title: t("profile.travelStats"),
+      screen: "TravelStats",
+      color: theme.colors.accentPersia,
     },
     {
       icon: CalendarDays,
