@@ -18,6 +18,7 @@ export const lightTheme = createTheme({
     success: "#0A6640",
     warning: "#CB6E17",
     info: "#0E566C",
+    transparent: "transparent",
   },
   spacing: {
     xs: 4,
@@ -84,5 +85,6 @@ export const darkTheme = createTheme({
     success: "#57D9A3",
     warning: "#FFB266",
     info: "#66D9FF",
+    transparent: "transparent",
   },
 });

@@ -6,6 +6,7 @@ import { StatusBar } from "react-native";
 import AuthNavigator from "./AuthNavigator";
 import MainNavigator from "./MainNavigator";
 import useAuthStore from "../stores/authStore";
+import { darkTheme } from "../theme/themes";
 
 const Navigation = () => {
   const theme = useTheme();

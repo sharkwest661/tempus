@@ -17,7 +17,7 @@ const WelcomeScreen = ({ navigation }) => {
       <Box flex={1} padding="l" justifyContent="space-between">
         <Box alignItems="center" marginTop="xl">
           <Image
-            source={require("../../assets/images/logo.png")}
+            source={require("../../../assets/images/logo.png")}
             style={{ width: 120, height: 120 }}
             resizeMode="contain"
           />
@@ -34,7 +34,7 @@ const WelcomeScreen = ({ navigation }) => {
         {/* Roman scene image */}
         <Box alignItems="center" marginVertical="xl">
           <Image
-            source={require("../../assets/images/welcome-illustration.png")}
+            source={require("../../../assets/images/welcome-illustration.png")}
             style={{ width: "100%", height: 250 }}
             resizeMode="contain"
           />

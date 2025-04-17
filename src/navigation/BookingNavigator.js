@@ -1,10 +1,10 @@
 // src/navigation/BookingNavigator.js
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import CalendarSelectionScreen from "../screens/booking/CalendarSelectionScreen";
-import TravelerInfoScreen from "../screens/booking/TravelerInfoScreen";
-import PaymentScreen from "../screens/booking/PaymentScreen";
-import ConfirmationScreen from "../screens/booking/ConfirmationScreen";
+import CalendarSelectionScreen from "../screens/bookings/CalendarSelectionScreen";
+import TravelerInfoScreen from "../screens/bookings/TravelerInfoScreen";
+import PaymentScreen from "../screens/bookings/PaymentScreen";
+import ConfirmationScreen from "../screens/bookings/ConfirmationScreen";
 
 const Stack = createStackNavigator();
 

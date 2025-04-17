@@ -48,17 +48,17 @@ const CivilizationScreen = ({ route, navigation }) => {
     // In a real app, you would use actual images here
     switch (civilization.id) {
       case "egypt":
-        return require("../../assets/images/egypt-placeholder.jpg");
+        return require("../../../assets/images/egypt-placeholder.jpg");
       case "greece":
-        return require("../../assets/images/greece-placeholder.jpg");
+        return require("../../../assets/images/greece-placeholder.jpg");
       case "china":
-        return require("../../assets/images/china-placeholder.jpg");
+        return require("../../../assets/images/china-placeholder.jpg");
       case "persia":
-        return require("../../assets/images/persia-placeholder.jpg");
+        return require("../../../assets/images/persia-placeholder.jpg");
       case "carthage":
-        return require("../../assets/images/carthage-placeholder.jpg");
+        return require("../../../assets/images/carthage-placeholder.jpg");
       default:
-        return require("../../assets/images/civilization-placeholder.jpg");
+        return require("../../../assets/images/civilization-placeholder.jpg");
     }
   };
 
