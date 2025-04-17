@@ -33,10 +33,17 @@ const CivilizationCard = ({ civilization, onPress, style }) => {
     }
   };
 
-  // Get accent color for the civilization
-  const getAccentColor = () => {
-    return theme.colors[civilization.accentColor] || theme.colors.primary;
+  // Get accent color key for the civilization
+  const getAccentColorKey = () => {
+    if (!civilization.accentColor) return "primary";
+
+    // Make sure the key exists in theme.colors
+    return theme.colors[civilization.accentColor]
+      ? civilization.accentColor
+      : "primary";
   };
+
+  const accentColorKey = getAccentColorKey();
 
   return (
     <TouchableOpacity onPress={onPress} activeOpacity={0.9}>
@@ -80,7 +87,7 @@ const CivilizationCard = ({ civilization, onPress, style }) => {
 
           <Box flexDirection="row" marginTop="s">
             <Box
-              backgroundColor={getAccentColor()}
+              backgroundColor={accentColorKey}
               paddingHorizontal="s"
               paddingVertical="xs"
               borderRadius="s"

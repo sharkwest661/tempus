@@ -40,6 +40,10 @@ export const lightTheme = createTheme({
     tablet: 768,
   },
   textVariants: {
+    defaults: {
+      fontSize: 16,
+      color: "textPrimary",
+    },
     header: {
       fontWeight: "bold",
       fontSize: 24,

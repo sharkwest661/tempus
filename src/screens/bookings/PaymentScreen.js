@@ -33,31 +33,36 @@ const PaymentScreen = ({ navigation }) => {
   // Payment method state
   const [selectedPayment, setSelectedPayment] = useState(null);
 
+  // Helper function to ensure we use valid theme color keys
+  const getColorKey = (colorKey) => {
+    return theme.colors[colorKey] ? colorKey : "primary";
+  };
+
   // Payment methods
   const paymentMethods = [
     {
       id: "treasury",
       name: t("booking.imperialTreasury"),
       icon: Landmark,
-      color: theme.colors.accentEgypt,
+      color: getColorKey("accentEgypt"),
     },
     {
       id: "moneylender",
       name: t("booking.localMoneylender"),
       icon: Coins,
-      color: theme.colors.accentGreece,
+      color: getColorKey("accentGreece"),
     },
     {
       id: "trade",
       name: t("booking.trade"),
       icon: Repeat,
-      color: theme.colors.accentChina,
+      color: getColorKey("accentChina"),
     },
     {
       id: "slave",
       name: t("booking.slave"),
       icon: Users,
-      color: theme.colors.accentPersia,
+      color: getColorKey("accentPersia"),
     },
   ];
 
@@ -159,25 +164,30 @@ const PaymentScreen = ({ navigation }) => {
                 padding="m"
                 backgroundColor={
                   selectedPayment === method.id
-                    ? method.color + "10"
+                    ? method.color
                     : "cardBackground"
                 }
-                borderColor={
-                  selectedPayment === method.id ? method.color : "border"
-                }
-                borderWidth={1}
+                style={{
+                  opacity: selectedPayment === method.id ? 0.1 : 1,
+                  borderColor:
+                    selectedPayment === method.id
+                      ? theme.colors[method.color]
+                      : theme.colors.border,
+                  borderWidth: 1,
+                }}
               >
                 <Box flexDirection="row" alignItems="center">
                   <Box
                     width={40}
                     height={40}
                     borderRadius={20}
-                    backgroundColor={method.color + "20"}
+                    backgroundColor={method.color}
+                    style={{ opacity: 0.2 }}
                     justifyContent="center"
                     alignItems="center"
                     marginRight="m"
                   >
-                    <method.icon size={20} color={method.color} />
+                    <method.icon size={20} color={theme.colors[method.color]} />
                   </Box>
                   <Text variant="body">{method.name}</Text>
                 </Box>

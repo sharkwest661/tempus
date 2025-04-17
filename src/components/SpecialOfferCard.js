@@ -12,6 +12,16 @@ const SpecialOfferCard = ({ offer, onPress }) => {
   const { t } = useTranslation();
   const theme = useTheme();
 
+  // Get accent color key
+  const getAccentColorKey = () => {
+    if (!offer.accentColor) return "primary";
+
+    // Make sure the key exists in theme.colors
+    return theme.colors[offer.accentColor] ? offer.accentColor : "primary";
+  };
+
+  const accentColorKey = getAccentColorKey();
+
   return (
     <TouchableOpacity onPress={onPress} activeOpacity={0.9}>
       <Card
@@ -22,9 +32,7 @@ const SpecialOfferCard = ({ offer, onPress }) => {
         width={280}
       >
         <Box
-          backgroundColor={
-            theme.colors[offer.accentColor] || theme.colors.primary
-          }
+          backgroundColor={accentColorKey}
           width={40}
           height={40}
           borderRadius={20}

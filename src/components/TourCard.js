@@ -20,6 +20,19 @@ const TourCard = ({ tour, onPress, style, size = "large" }) => {
   const isFavorite = useFavoritesStore((state) => state.isFavorite(tour.id));
   const toggleFavorite = useFavoritesStore((state) => state.toggleFavorite);
 
+  // Get accent color key for the civilization
+  const getAccentColorKey = (civilizationId) => {
+    if (!civilizationId) return "primary";
+
+    // Convert to proper format (e.g., "egypt" -> "accentEgypt")
+    const accentKey = `accent${
+      civilizationId.charAt(0).toUpperCase() + civilizationId.slice(1)
+    }`;
+
+    // Make sure the key exists in theme.colors
+    return theme.colors[accentKey] ? accentKey : "primary";
+  };
+
   // Determine image placeholder based on civilization
   const getImageSource = () => {
     // In a real app, you would use actual images here
@@ -57,6 +70,7 @@ const TourCard = ({ tour, onPress, style, size = "large" }) => {
   };
 
   const sizeStyle = cardSizes[size] || cardSizes.large;
+  const accentColorKey = getAccentColorKey(tour.civilizationId);
 
   return (
     <TouchableOpacity onPress={onPress} activeOpacity={0.9}>
@@ -105,16 +119,7 @@ const TourCard = ({ tour, onPress, style, size = "large" }) => {
 
           <Box flexDirection="row" alignItems="center" marginTop="s">
             <Box
-              backgroundColor={
-                tour.civilizationId
-                  ? theme.colors[
-                      `accent${
-                        tour.civilizationId.charAt(0).toUpperCase() +
-                        tour.civilizationId.slice(1)
-                      }`
-                    ] || theme.colors.primary
-                  : ""
-              }
+              backgroundColor={accentColorKey}
               paddingHorizontal="s"
               paddingVertical="xs"
               borderRadius="s"

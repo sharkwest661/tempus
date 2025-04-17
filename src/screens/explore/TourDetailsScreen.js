@@ -38,6 +38,18 @@ const TourDetailsScreen = ({ route, navigation }) => {
   // Get booking actions
   const startBooking = useBookingsStore((state) => state.startBooking);
 
+  // Get accent color key for the civilization
+  const getAccentColorKey = () => {
+    if (!civilization?.accentColor) return "primary";
+
+    // Make sure the key exists in theme.colors
+    return theme.colors[civilization.accentColor]
+      ? civilization.accentColor
+      : "primary";
+  };
+
+  const accentColorKey = getAccentColorKey();
+
   // Set selected tour in store when page loads
   useEffect(() => {
     if (id) {
@@ -129,9 +141,7 @@ const TourDetailsScreen = ({ route, navigation }) => {
             marginBottom="m"
           >
             <Box
-              backgroundColor={
-                theme.colors[civilization.accentColor] || theme.colors.primary
-              }
+              backgroundColor={accentColorKey}
               paddingHorizontal="s"
               paddingVertical="xs"
               borderRadius="s"
@@ -220,9 +230,7 @@ const TourDetailsScreen = ({ route, navigation }) => {
                 width={8}
                 height={8}
                 borderRadius={4}
-                backgroundColor={
-                  theme.colors[civilization.accentColor] || theme.colors.primary
-                }
+                backgroundColor={accentColorKey}
                 marginRight="s"
               />
               <Text variant="body">{item}</Text>
@@ -250,9 +258,7 @@ const TourDetailsScreen = ({ route, navigation }) => {
                 width={8}
                 height={8}
                 borderRadius={4}
-                backgroundColor={
-                  theme.colors[civilization.accentColor] || theme.colors.primary
-                }
+                backgroundColor={accentColorKey}
                 marginRight="s"
               />
               <Text variant="body">{item}</Text>
