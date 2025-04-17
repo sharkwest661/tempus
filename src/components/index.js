@@ -1,0 +1,9 @@
+// Update components/index.js to export the new components
+export { default as Box } from "./Box";
+export { default as Text } from "./Text";
+export { default as Button } from "./Button";
+export { default as Card } from "./Card";
+export { default as TourCard } from "./TourCard";
+export { default as CivilizationCard } from "./CivilizationCard";
+export { default as SpecialOfferCard } from "./SpecialOfferCard";
+export { default as SectionHeader } from "./SectionHeader";
