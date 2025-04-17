@@ -19,6 +19,17 @@ export const lightTheme = createTheme({
     warning: "#CB6E17",
     info: "#0E566C",
     transparent: "transparent",
+
+    primaryTransparent: "rgba(106, 4, 15, 0.3)",
+    secondaryTransparent: "rgba(230, 204, 178, 0.3)",
+    accentEgyptTransparent: "rgba(2, 62, 138, 0.3)",
+    accentGreeceTransparent: "rgba(96, 108, 56, 0.3)",
+    accentChinaTransparent: "rgba(174, 32, 18, 0.3)",
+    accentPersiaTransparent: "rgba(17, 138, 178, 0.3)",
+    errorTransparent: "rgba(207, 17, 36, 0.3)",
+    successTransparent: "rgba(10, 102, 64, 0.3)",
+    warningTransparent: "rgba(203, 110, 23, 0.3)",
+    infoTransparent: "rgba(14, 86, 108, 0.3)",
   },
   spacing: {
     xs: 4,
@@ -29,11 +40,18 @@ export const lightTheme = createTheme({
     xxl: 64,
   },
   borderRadii: {
+    xs: 4,
     s: 8,
     m: 16,
     l: 24,
     xl: 40,
     none: 0,
+  },
+  fontSizes: {
+    small: 12,
+    medium: 14, // This is what's missing and causing the error
+    large: 16,
+    xlarge: 20,
   },
   breakpoints: {
     phone: 0,
@@ -90,5 +108,7 @@ export const darkTheme = createTheme({
     warning: "#FFB266",
     info: "#66D9FF",
     transparent: "transparent",
+    primaryTransparent: "rgba(125, 91, 166, 0.3)",
+    secondaryTransparent: "rgba(255, 209, 102, 0.3)",
   },
 });

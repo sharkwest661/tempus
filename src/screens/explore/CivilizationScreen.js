@@ -98,7 +98,7 @@ const CivilizationScreen = ({ route, navigation }) => {
             left={0}
             right={0}
             padding="m"
-            backgroundColor="rgba(0,0,0,0.6)"
+            style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
           >
             <Text variant="header" color="secondary">
               {t(`civilizations.${civilization.id}.name`) || civilization.name}
@@ -181,7 +181,7 @@ const CivilizationScreen = ({ route, navigation }) => {
               <Box
                 width={8}
                 height={8}
-                borderRadius={4}
+                borderRadius={"xs"}
                 backgroundColor={
                   theme.colors[civilization.accentColor] || theme.colors.primary
                 }

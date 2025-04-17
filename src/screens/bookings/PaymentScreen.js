@@ -180,7 +180,7 @@ const PaymentScreen = ({ navigation }) => {
                   <Box
                     width={40}
                     height={40}
-                    borderRadius={20}
+                    borderRadius={"l"}
                     backgroundColor={method.color}
                     style={{ opacity: 0.2 }}
                     justifyContent="center"
@@ -196,7 +196,7 @@ const PaymentScreen = ({ navigation }) => {
                   <Box
                     width={24}
                     height={24}
-                    borderRadius={12}
+                    borderRadius={"m"}
                     backgroundColor={method.color}
                     justifyContent="center"
                     alignItems="center"

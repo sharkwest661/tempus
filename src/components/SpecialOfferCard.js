@@ -35,7 +35,7 @@ const SpecialOfferCard = ({ offer, onPress }) => {
           backgroundColor={accentColorKey}
           width={40}
           height={40}
-          borderRadius={20}
+          borderRadius="l"
           justifyContent="center"
           alignItems="center"
           marginRight="m"

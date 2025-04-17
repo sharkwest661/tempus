@@ -1,5 +1,5 @@
 // src/navigation/MainNavigator.js
-import React from "react";
+import React, { useEffect } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Home, Compass, Calendar, User } from "lucide-react-native";
 import { useTheme } from "@shopify/restyle";
@@ -21,6 +21,10 @@ const MainNavigator = () => {
         tabBarStyle: {
           backgroundColor: theme.colors.cardBackground,
           borderTopColor: theme.colors.border,
+        },
+        // Add these explicit styles:
+        tabBarLabelStyle: {
+          fontSize: 12, // Explicit font size instead of using theme
         },
         headerShown: false,
       }}

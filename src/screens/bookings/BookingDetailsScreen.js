@@ -170,7 +170,7 @@ const BookingDetailsScreen = ({ route, navigation }) => {
               <Box
                 width={40}
                 height={40}
-                borderRadius={20}
+                borderRadius={"l"}
                 backgroundColor="secondary"
                 justifyContent="center"
                 alignItems="center"
@@ -209,7 +209,7 @@ const BookingDetailsScreen = ({ route, navigation }) => {
                 <Box
                   width={40}
                   height={40}
-                  borderRadius={20}
+                  borderRadius={"l"}
                   backgroundColor={
                     traveler.isPrimary
                       ? theme.colors.primary + "20"
@@ -253,8 +253,8 @@ const BookingDetailsScreen = ({ route, navigation }) => {
               <Box
                 width={40}
                 height={40}
-                borderRadius={20}
-                backgroundColor={theme.colors.accentEgypt + "20"}
+                borderRadius={"l"}
+                backgroundColor="accentEgyptTransparent"
                 justifyContent="center"
                 alignItems="center"
                 marginRight="m"
@@ -304,7 +304,7 @@ const BookingDetailsScreen = ({ route, navigation }) => {
               label={t("booking.cancelBooking")}
               variant="outline"
               onPress={handleCancel}
-              backgroundColor={theme.colors.error + "10"}
+              backgroundColor="errorTransparent"
               borderColor={theme.colors.error}
               labelColor="error"
             />

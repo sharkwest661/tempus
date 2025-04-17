@@ -1,5 +1,5 @@
 // src/screens/bookings/BookingHistoryScreen.js
-import React from "react";
+import React, { useMemo } from "react";
 import { ScrollView, TouchableOpacity, StyleSheet } from "react-native";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@shopify/restyle";
@@ -13,15 +13,20 @@ const BookingHistoryScreen = ({ navigation }) => {
   const { t } = useTranslation();
   const theme = useTheme();
 
-  // Get booking history
-  const bookingHistory = useBookingsStore((state) => state.getBookingHistory());
+  // Get function references rather than calling functions directly
+  const getBookingHistory = useBookingsStore(
+    (state) => state.getBookingHistory
+  );
+  const getTour = useDestinationsStore((state) => state.getTour);
+
+  // Calculate derived data once with useMemo
+  const bookingHistory = useMemo(
+    () => getBookingHistory(),
+    [getBookingHistory]
+  );
 
   const handleBookingPress = (bookingId) => {
     navigation.navigate("BookingDetails", { id: bookingId });
-  };
-
-  const getTourForBooking = (tourId) => {
-    return useDestinationsStore.getState().getTour(tourId);
   };
 
   return (
@@ -47,7 +52,9 @@ const BookingHistoryScreen = ({ navigation }) => {
         {bookingHistory.length > 0 ? (
           <Box padding="m">
             {bookingHistory.map((booking) => {
-              const tour = getTourForBooking(booking.tourId);
+              // Use the stable function reference directly
+              const tour = getTour(booking.tourId);
+
               return (
                 <TouchableOpacity
                   key={booking.id}
@@ -64,7 +71,7 @@ const BookingHistoryScreen = ({ navigation }) => {
                       <Text
                         variant="caption"
                         color="textSecondary"
-                        backgroundColor={theme.colors.textSecondary + "20"}
+                        backgroundColor="textSecondaryTransparent"
                         paddingHorizontal="s"
                         paddingVertical="xs"
                         borderRadius="s"
@@ -106,7 +113,7 @@ const BookingHistoryScreen = ({ navigation }) => {
                       justifyContent="space-between"
                       alignItems="center"
                       padding="s"
-                      backgroundColor={theme.colors.background}
+                      backgroundColor="background"
                       borderRadius="s"
                     >
                       <Text variant="caption">
@@ -126,8 +133,8 @@ const BookingHistoryScreen = ({ navigation }) => {
             <Box
               width={80}
               height={80}
-              borderRadius={40}
-              backgroundColor={theme.colors.secondary + "30"}
+              borderRadius={"xl"}
+              backgroundColor="secondaryTransparent"
               justifyContent="center"
               alignItems="center"
               marginBottom="l"

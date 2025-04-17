@@ -1,5 +1,5 @@
 // src/screens/bookings/ActiveBookingsScreen.js
-import React from "react";
+import React, { useMemo } from "react";
 import { ScrollView, TouchableOpacity, StyleSheet } from "react-native";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@shopify/restyle";
@@ -13,15 +13,20 @@ const ActiveBookingsScreen = ({ navigation }) => {
   const { t } = useTranslation();
   const theme = useTheme();
 
-  // Get active bookings
-  const activeBookings = useBookingsStore((state) => state.getActiveBookings());
+  // Get function references
+  const getActiveBookings = useBookingsStore(
+    (state) => state.getActiveBookings
+  );
+  const getTour = useDestinationsStore((state) => state.getTour);
+
+  // Calculate derived data once with useMemo
+  const activeBookings = useMemo(
+    () => getActiveBookings(),
+    [getActiveBookings]
+  );
 
   const handleBookingPress = (bookingId) => {
     navigation.navigate("BookingDetails", { id: bookingId });
-  };
-
-  const getTourForBooking = (tourId) => {
-    return useDestinationsStore.getState().getTour(tourId);
   };
 
   const handleHistoryPress = () => {
@@ -95,7 +100,7 @@ const ActiveBookingsScreen = ({ navigation }) => {
         {activeBookings.length > 0 ? (
           <Box padding="m">
             {activeBookings.map((booking) => {
-              const tour = getTourForBooking(booking.tourId);
+              const tour = getTour(booking.tourId);
               return (
                 <TouchableOpacity
                   key={booking.id}
@@ -112,7 +117,7 @@ const ActiveBookingsScreen = ({ navigation }) => {
                       <Text
                         variant="caption"
                         color="success"
-                        backgroundColor={theme.colors.success + "20"}
+                        backgroundColor="successTransparent"
                         paddingHorizontal="s"
                         paddingVertical="xs"
                         borderRadius="s"
@@ -154,7 +159,7 @@ const ActiveBookingsScreen = ({ navigation }) => {
                       justifyContent="space-between"
                       alignItems="center"
                       padding="s"
-                      backgroundColor={theme.colors.background}
+                      backgroundColor="background"
                       borderRadius="s"
                     >
                       <Text variant="caption">
@@ -174,8 +179,8 @@ const ActiveBookingsScreen = ({ navigation }) => {
             <Box
               width={80}
               height={80}
-              borderRadius={40}
-              backgroundColor={theme.colors.secondary + "30"}
+              borderRadius={"xl"}
+              backgroundColor="secondaryTransparent"
               justifyContent="center"
               alignItems="center"
               marginBottom="l"

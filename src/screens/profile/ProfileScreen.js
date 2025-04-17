@@ -62,7 +62,7 @@ const ProfileScreen = ({ navigation }) => {
             <Box
               width={70}
               height={70}
-              borderRadius={35}
+              borderRadius={"xl"}
               backgroundColor="secondary"
               justifyContent="center"
               alignItems="center"
@@ -119,8 +119,9 @@ const ProfileScreen = ({ navigation }) => {
                   <Box
                     width={40}
                     height={40}
-                    borderRadius={20}
-                    backgroundColor={option.color + "20"}
+                    borderRadius={"l"}
+                    backgroundColor={option.color}
+                    opacity={0.2}
                     justifyContent="center"
                     alignItems="center"
                     marginRight="m"
@@ -142,13 +143,13 @@ const ProfileScreen = ({ navigation }) => {
               flexDirection="row"
               alignItems="center"
               padding="m"
-              backgroundColor={theme.colors.error + "10"}
+              backgroundColor="errorTransparent"
             >
               <Box
                 width={40}
                 height={40}
-                borderRadius={20}
-                backgroundColor={theme.colors.error + "20"}
+                borderRadius={"l"}
+                backgroundColor="errorTransparent"
                 justifyContent="center"
                 alignItems="center"
                 marginRight="m"

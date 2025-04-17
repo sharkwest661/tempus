@@ -76,7 +76,7 @@ const ConfirmationScreen = ({ navigation }) => {
           <Card
             padding="m"
             marginBottom="m"
-            backgroundColor={theme.colors.success + "10"}
+            backgroundColor="successTransparent"
             borderColor={theme.colors.success}
             borderWidth={1}
           >
@@ -149,7 +149,7 @@ const ConfirmationScreen = ({ navigation }) => {
                 <Box
                   width={8}
                   height={8}
-                  borderRadius={4}
+                  borderRadius={"xs"}
                   backgroundColor="primary"
                   marginTop="s"
                   marginRight="s"

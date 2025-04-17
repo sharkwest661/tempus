@@ -80,8 +80,8 @@ const SettingsScreen = ({ navigation }) => {
                 <Box
                   width={40}
                   height={40}
-                  borderRadius={20}
-                  backgroundColor={theme.colors.secondary + "30"}
+                  borderRadius="l"
+                  backgroundColor="secondaryTransparent"
                   justifyContent="center"
                   alignItems="center"
                   marginRight="m"
@@ -119,8 +119,8 @@ const SettingsScreen = ({ navigation }) => {
                 <Box
                   width={40}
                   height={40}
-                  borderRadius={20}
-                  backgroundColor={theme.colors.primary + "30"}
+                  borderRadius="l"
+                  backgroundColor="primaryTransparent"
                   justifyContent="center"
                   alignItems="center"
                   marginRight="m"
@@ -157,8 +157,8 @@ const SettingsScreen = ({ navigation }) => {
                 <Box
                   width={40}
                   height={40}
-                  borderRadius={20}
-                  backgroundColor={theme.colors.info + "30"}
+                  borderRadius="l"
+                  backgroundColor="infoTransparent"
                   justifyContent="center"
                   alignItems="center"
                   marginRight="m"
@@ -211,7 +211,7 @@ const SettingsScreen = ({ navigation }) => {
                   <Box
                     width={20}
                     height={20}
-                    borderRadius={10}
+                    borderRadius={"m"}
                     borderWidth={2}
                     borderColor="primary"
                     backgroundColor={
@@ -245,8 +245,8 @@ const SettingsScreen = ({ navigation }) => {
                 <Box
                   width={40}
                   height={40}
-                  borderRadius={20}
-                  backgroundColor={theme.colors.warning + "30"}
+                  borderRadius="l"
+                  backgroundColor="errorTransparent"
                   justifyContent="center"
                   alignItems="center"
                   marginRight="m"
@@ -274,8 +274,8 @@ const SettingsScreen = ({ navigation }) => {
                 <Box
                   width={40}
                   height={40}
-                  borderRadius={20}
-                  backgroundColor={theme.colors.accentGreece + "30"}
+                  borderRadius="l"
+                  backgroundColor="accentGreeceTransparent"
                   justifyContent="center"
                   alignItems="center"
                   marginRight="m"
@@ -303,8 +303,8 @@ const SettingsScreen = ({ navigation }) => {
                 <Box
                   width={40}
                   height={40}
-                  borderRadius={20}
-                  backgroundColor={theme.colors.accentPersia + "30"}
+                  borderRadius="l"
+                  backgroundColor="accentPersiaTransparent"
                   justifyContent="center"
                   alignItems="center"
                   marginRight="m"

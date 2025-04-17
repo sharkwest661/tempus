@@ -7,14 +7,17 @@ import AuthNavigator from "./AuthNavigator";
 import MainNavigator from "./MainNavigator";
 import useAuthStore from "../stores/authStore";
 import { darkTheme } from "../theme/themes";
+import { DefaultTheme } from "@react-navigation/native";
 
 const Navigation = () => {
   const theme = useTheme();
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
 
+  // Use the default navigation theme structure
   const navigationTheme = {
-    dark: theme.colors.background === darkTheme.colors.background,
+    ...DefaultTheme,
     colors: {
+      ...DefaultTheme.colors,
       primary: theme.colors.primary,
       background: theme.colors.background,
       card: theme.colors.cardBackground,

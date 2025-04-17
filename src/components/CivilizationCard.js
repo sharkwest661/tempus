@@ -72,9 +72,9 @@ const CivilizationCard = ({ civilization, onPress, style }) => {
           left={0}
           right={0}
           height="60%"
-          backgroundColor="rgba(0,0,0,0.6)"
           justifyContent="flex-end"
           padding="m"
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
           <Text variant="subheader" color="secondary" marginBottom="xs">
             {t(`civilizations.${civilization.id}.name`) || civilization.name}

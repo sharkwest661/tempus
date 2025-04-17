@@ -89,8 +89,8 @@ const FavoritesScreen = ({ navigation }) => {
           <Box
             width={80}
             height={80}
-            borderRadius={40}
-            backgroundColor={theme.colors.secondary + "30"}
+            borderRadius={"xl"}
+            backgroundColor="secondaryTransparent"
             justifyContent="center"
             alignItems="center"
             marginBottom="l"
