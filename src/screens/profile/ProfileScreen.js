@@ -28,19 +28,19 @@ const ProfileScreen = ({ navigation }) => {
       icon: Heart,
       title: t("profile.favorites"),
       screen: "Favorites",
-      color: theme.colors.error,
+      color: "error",
     },
     {
       icon: CalendarDays,
       title: t("profile.bookingHistory"),
       screen: "BookingHistory",
-      color: theme.colors.accentEgypt,
+      color: "accentEgypt",
     },
     {
       icon: Settings,
       title: t("profile.settings"),
       screen: "Settings",
-      color: theme.colors.textSecondary,
+      color: "textSecondary",
     },
   ];
 

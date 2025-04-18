@@ -30,6 +30,7 @@ export const lightTheme = createTheme({
     successTransparent: "rgba(10, 102, 64, 0.3)",
     warningTransparent: "rgba(203, 110, 23, 0.3)",
     infoTransparent: "rgba(14, 86, 108, 0.3)",
+    textSecondaryTransparent: "rgba(38, 35, 34, 0.2)",
   },
   spacing: {
     xs: 4,
@@ -49,7 +50,7 @@ export const lightTheme = createTheme({
   },
   fontSizes: {
     small: 12,
-    medium: 14, // This is what's missing and causing the error
+    medium: 14,
     large: 16,
     xlarge: 20,
   },
@@ -108,7 +109,18 @@ export const darkTheme = createTheme({
     warning: "#FFB266",
     info: "#66D9FF",
     transparent: "transparent",
+
+    // Adding all transparent variants for dark theme
     primaryTransparent: "rgba(125, 91, 166, 0.3)",
     secondaryTransparent: "rgba(255, 209, 102, 0.3)",
+    accentEgyptTransparent: "rgba(140, 95, 247, 0.3)",
+    accentGreeceTransparent: "rgba(0, 180, 216, 0.3)",
+    accentChinaTransparent: "rgba(255, 92, 138, 0.3)",
+    accentPersiaTransparent: "rgba(0, 245, 212, 0.3)",
+    errorTransparent: "rgba(255, 128, 128, 0.3)",
+    successTransparent: "rgba(87, 217, 163, 0.3)",
+    warningTransparent: "rgba(255, 178, 102, 0.3)",
+    infoTransparent: "rgba(102, 217, 255, 0.3)",
+    textSecondaryTransparent: "rgba(173, 181, 189, 0.2)",
   },
 });
